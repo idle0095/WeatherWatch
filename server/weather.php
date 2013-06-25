@@ -13,7 +13,7 @@ function minute_to_value($minute, $units)  {
     return $t;
 }
 
-define('API_KEY', '52c488b6e9f22a19b2ec31c083b62f46');
+define('API_KEY', '780b3de2304a7ef7');
 $payload = json_decode(file_get_contents('php://input'), true);
 if(!$payload) die();
 $payload[1] /= 10000;
