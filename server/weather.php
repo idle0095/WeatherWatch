@@ -18,7 +18,7 @@ $payload = json_decode(file_get_contents('php://input'), true);
 if(!$payload) die();
 $payload[1] /= 10000;
 $payload[2] /= 10000;
-$url = "http://api.forecast.io/forecast/" . API_KEY . "/$payload[1],$payload[2]?units=$payload[3]&exclude=hourly,daily,alerts";
+$url = "http://api.wunderground.com" . API_KEY . "/$payload[1],$payload[2]?units=$payload[3]&exclude=hourly,daily,alerts";
 $forecast = json_decode(@file_get_contents($url));
 if(!$forecast) {
     die();
